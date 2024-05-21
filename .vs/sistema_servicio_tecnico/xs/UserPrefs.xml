@@ -1,0 +1,70 @@
+﻿<Properties StartupConfiguration="{B4C13DB7-2A7E-4205-826F-A4C987BB77DA}|https">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Home/Index.cshtml">
+    <Files>
+      <File FileName="appsettings.json" Line="15" Column="1" />
+      <File FileName="Program.cs" Line="11" Column="150" />
+      <File FileName="Models/MercyDeveloperContext.cs" Line="91" Column="1" />
+      <File FileName="Controllers/ClientesController.cs" Line="43" Column="1" />
+      <File FileName="Controllers/ServiciosController.cs" Line="38" Column="55" />
+      <File FileName="Models/Servicio.cs" Line="1" Column="1" />
+      <File FileName="Models/Cliente.cs" Line="1" Column="1" />
+      <File FileName="Models/Usuario.cs" Line="1" Column="1" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="28" Column="46" />
+      <File FileName="Controllers/UsuariosController.cs" Line="142" Column="10" />
+      <File FileName="Views/Clientes/Index.cshtml" Line="60" Column="74" />
+      <File FileName="Views/Home/Index.cshtml" Line="11" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="sistema_servicio_tecnico" expanded="True">
+            <Node name="sistema_servicio_tecnico" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Clientes" expanded="True" />
+                <Node name="Home" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="js" expanded="True" />
+                <Node name="lib" expanded="True">
+                  <Node name="bootstrap" expanded="True" />
+                  <Node name="jquery" expanded="True" />
+                  <Node name="jquery-validation" expanded="True" />
+                  <Node name="jquery-validation-unobtrusive" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State name="__root__">
+          <Node name="sistema_servicio_tecnico" expanded="True" selected="True">
+            <Node name="sistema_servicio_tecnico" expanded="True">
+              <Node name="AspNetCore" expanded="True" />
+              <Node name="Program" expanded="True" />
+              <Node name="sistema_servicio_tecnico" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.sistema__servicio__tecnico PreferredExecutionTarget="/Applications/Opera.app" />
+  <MultiItemStartupConfigurations />
+</Properties>
