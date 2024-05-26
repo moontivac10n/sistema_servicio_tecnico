@@ -11,11 +11,13 @@ public partial class Cliente
 
     public string Apellido { get; set; } = null!;
 
-    public string? Correo { get; set; }
+    public string Correo { get; set; } = null!;
 
     public string? Telefono { get; set; }
 
     public string? Direccion { get; set; }
 
-    public string? Estado { get; set; }
+    public string Estado { get; set; } = null!;
+
+    public virtual ICollection<RecepcionEquipo> RecepcionEquipos { get; } = new List<RecepcionEquipo>();
 }

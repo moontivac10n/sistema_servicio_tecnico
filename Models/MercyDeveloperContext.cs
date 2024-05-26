@@ -17,11 +17,16 @@ public partial class MercyDeveloperContext : DbContext
 
     public virtual DbSet<Cliente> Clientes { get; set; }
 
+    public virtual DbSet<DescripcionServicio> DescripcionServicios { get; set; }
+
+    public virtual DbSet<RecepcionEquipo> RecepcionEquipos { get; set; }
+
     public virtual DbSet<Servicio> Servicios { get; set; }
 
     public virtual DbSet<Usuario> Usuarios { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+
     {
         if (!optionsBuilder.IsConfigured)
         {
@@ -50,22 +55,79 @@ public partial class MercyDeveloperContext : DbContext
             entity.Property(e => e.Telefono).HasMaxLength(13);
         });
 
+        modelBuilder.Entity<DescripcionServicio>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PRIMARY");
+
+            entity.ToTable("DescripcionServicio");
+
+            entity.HasIndex(e => e.ServicioId, "fk_DescripcionServicio_Servicio1_idx");
+
+            entity.Property(e => e.Id).HasColumnType("int(11)");
+            entity.Property(e => e.Nombre).HasMaxLength(45);
+            entity.Property(e => e.ServicioId).HasColumnType("int(11)");
+
+            entity.HasOne(d => d.Servicio).WithMany(p => p.DescripcionServicios)
+                .HasForeignKey(d => d.ServicioId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("fk_DescripcionServicio_Servicio1");
+        });
+
+        modelBuilder.Entity<RecepcionEquipo>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PRIMARY");
+
+            entity.ToTable("RecepcionEquipo");
+
+            entity.HasIndex(e => e.ClienteId, "fk_RecepcionEquipo_Cliente1_idx");
+
+            entity.HasIndex(e => e.ServicioId, "fk_RecepcionEquipo_Servicio1_idx");
+
+            entity.Property(e => e.Id).HasColumnType("int(11)");
+            entity.Property(e => e.Accesorio).HasMaxLength(400);
+            entity.Property(e => e.CapacidadAlmacenamiento).HasMaxLength(50);
+            entity.Property(e => e.CapacidadRam).HasColumnType("int(11)");
+            entity.Property(e => e.ClienteId).HasColumnType("int(11)");
+            entity.Property(e => e.Fecha).HasColumnType("datetime");
+            entity.Property(e => e.Grafico).HasMaxLength(50);
+            entity.Property(e => e.MarcaPc).HasMaxLength(60);
+            entity.Property(e => e.ModeloPc).HasMaxLength(60);
+            entity.Property(e => e.Nserie)
+                .HasMaxLength(100)
+                .HasColumnName("NSerie");
+            entity.Property(e => e.ServicioId).HasColumnType("int(11)");
+            entity.Property(e => e.TipoAlmacenamiento).HasMaxLength(40);
+            entity.Property(e => e.TipoGpu).HasMaxLength(50);
+            entity.Property(e => e.TipoPc).HasMaxLength(45);
+
+            entity.HasOne(d => d.Cliente).WithMany(p => p.RecepcionEquipos)
+                .HasForeignKey(d => d.ClienteId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("fk_RecepcionEquipo_Cliente1");
+
+            entity.HasOne(d => d.Servicio).WithMany(p => p.RecepcionEquipos)
+                .HasForeignKey(d => d.ServicioId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("fk_RecepcionEquipo_Servicio1");
+        });
+
         modelBuilder.Entity<Servicio>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PRIMARY");
 
             entity.ToTable("Servicio");
 
-            entity.HasIndex(e => e.UsuariosId, "fk_Servicio_Usuario_idx");
+            entity.HasIndex(e => e.UsuarioId, "fk_Servicio_Usuario_idx");
 
             entity.Property(e => e.Id).HasColumnType("int(11)");
+            entity.Property(e => e.Estado).HasColumnType("int(11)");
             entity.Property(e => e.Nombre).HasMaxLength(100);
             entity.Property(e => e.Precio).HasColumnType("int(11)");
             entity.Property(e => e.Sku).HasMaxLength(45);
-            entity.Property(e => e.UsuariosId).HasColumnType("int(11)");
+            entity.Property(e => e.UsuarioId).HasColumnType("int(11)");
 
-            entity.HasOne(d => d.Usuarios).WithMany(p => p.Servicios)
-                .HasForeignKey(d => d.UsuariosId)
+            entity.HasOne(d => d.Usuario).WithMany(p => p.Servicios)
+                .HasForeignKey(d => d.UsuarioId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("fk_Servicio_Usuario");
         });

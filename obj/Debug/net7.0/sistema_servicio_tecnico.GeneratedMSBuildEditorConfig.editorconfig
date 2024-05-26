@@ -36,12 +36,52 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/moontivac10n/Projects/sistema_servicio_tecnico/Views/Descripcion/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVzY3JpcGNpb24vQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/moontivac10n/Projects/sistema_servicio_tecnico/Views/Descripcion/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVzY3JpcGNpb24vRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/moontivac10n/Projects/sistema_servicio_tecnico/Views/Descripcion/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVzY3JpcGNpb24vRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/moontivac10n/Projects/sistema_servicio_tecnico/Views/Descripcion/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVzY3JpcGNpb24vRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/moontivac10n/Projects/sistema_servicio_tecnico/Views/Descripcion/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVzY3JpcGNpb24vSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/moontivac10n/Projects/sistema_servicio_tecnico/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/moontivac10n/Projects/sistema_servicio_tecnico/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/moontivac10n/Projects/sistema_servicio_tecnico/Views/Recepciones/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVjZXBjaW9uZXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/moontivac10n/Projects/sistema_servicio_tecnico/Views/Recepciones/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVjZXBjaW9uZXMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/moontivac10n/Projects/sistema_servicio_tecnico/Views/Recepciones/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVjZXBjaW9uZXMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/moontivac10n/Projects/sistema_servicio_tecnico/Views/Recepciones/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVjZXBjaW9uZXMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/moontivac10n/Projects/sistema_servicio_tecnico/Views/Recepciones/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVjZXBjaW9uZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/moontivac10n/Projects/sistema_servicio_tecnico/Views/Servicios/Create.cshtml]

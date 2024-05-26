@@ -21,7 +21,7 @@ namespace sistema_servicio_tecnico.Controllers
         // GET: Servicios
         public async Task<IActionResult> Index()
         {
-            var mercyDeveloperContext = _context.Servicios.Include(s => s.Usuarios);
+            var mercyDeveloperContext = _context.Servicios.Include(s => s.Usuario);
             return View(await mercyDeveloperContext.ToListAsync());
         }
 
@@ -34,7 +34,7 @@ namespace sistema_servicio_tecnico.Controllers
             }
 
             var servicio = await _context.Servicios
-                .Include(s => s.Usuarios)
+                .Include(s => s.Usuario)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (servicio == null)
             {
@@ -47,7 +47,7 @@ namespace sistema_servicio_tecnico.Controllers
         // GET: Servicios/Create
         public IActionResult Create()
         {
-            ViewData["UsuariosId"] = new SelectList(_context.Usuarios, "Id", "Id");
+            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "Id", "Id");
             return View();
         }
 
@@ -56,7 +56,7 @@ namespace sistema_servicio_tecnico.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre,Precio,Sku,UsuariosId")] Servicio servicio)
+        public async Task<IActionResult> Create([Bind("Id,Nombre,Precio,Sku,UsuarioId")] Servicio servicio)
         {
             if (servicio.Nombre != null && servicio.Precio != 0)
             {
@@ -64,7 +64,7 @@ namespace sistema_servicio_tecnico.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UsuariosId"] = new SelectList(_context.Usuarios, "Id", "Id", servicio.UsuariosId);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "Id", "Id", servicio.UsuarioId);
             return View(servicio);
         }
 
@@ -81,7 +81,7 @@ namespace sistema_servicio_tecnico.Controllers
             {
                 return NotFound();
             }
-            ViewData["UsuariosId"] = new SelectList(_context.Usuarios, "Id", "Id", servicio.UsuariosId);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "Id", "Id", servicio.UsuarioId);
             return View(servicio);
         }
 
@@ -90,14 +90,14 @@ namespace sistema_servicio_tecnico.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Precio,Sku,UsuariosId")] Servicio servicio)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Precio,Sku,UsuarioId")] Servicio servicio)
         {
             if (id != servicio.Id)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            if (servicio.Nombre != null && servicio.Precio != 0)
             {
                 try
                 {
@@ -117,7 +117,7 @@ namespace sistema_servicio_tecnico.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UsuariosId"] = new SelectList(_context.Usuarios, "Id", "Id", servicio.UsuariosId);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "Id", "Id", servicio.UsuarioId);
             return View(servicio);
         }
 
@@ -130,7 +130,7 @@ namespace sistema_servicio_tecnico.Controllers
             }
 
             var servicio = await _context.Servicios
-                .Include(s => s.Usuarios)
+                .Include(s => s.Usuario)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (servicio == null)
             {

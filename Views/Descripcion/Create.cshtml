@@ -1,0 +1,37 @@
+@model sistema_servicio_tecnico.Models.DescripcionServicio
+
+@{
+    ViewData["Title"] = "Crear";
+}
+
+<h1>Crear nueva Descripcion</h1>
+
+<h4>Descripciones</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ServicioId" class="control-label"></label>
+                <select asp-for="ServicioId" class ="form-control" asp-items="ViewBag.ServicioId"></select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Crear</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-secondary">Volver a la lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
