@@ -7,7 +7,7 @@
 <h1>Indice</h1>
 
 <p>
-    <a asp-action="Create">Crear nuevo Servicio</a>
+    <button type="submit" class="btn btn-primary">Crear nuevo Servicio</button>
 </p>
 <table class="table">
     <thead>
@@ -45,7 +45,7 @@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Editar</a> |
                 <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Detalles</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-secondary">Borrar</a>
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Borrar</a>
             </td>
         </tr>
 }

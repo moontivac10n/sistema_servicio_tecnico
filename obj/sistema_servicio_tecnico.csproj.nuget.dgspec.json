@@ -1,26 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/moontivac10n/Projects/sistema_servicio_tecnico/sistema_servicio_tecnico.csproj": {}
+    "C:\\Users\\Usuario\\source\\repos\\sistema_servicio_tecnico\\sistema_servicio_tecnico.csproj": {}
   },
   "projects": {
-    "/Users/moontivac10n/Projects/sistema_servicio_tecnico/sistema_servicio_tecnico.csproj": {
+    "C:\\Users\\Usuario\\source\\repos\\sistema_servicio_tecnico\\sistema_servicio_tecnico.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/moontivac10n/Projects/sistema_servicio_tecnico/sistema_servicio_tecnico.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\sistema_servicio_tecnico\\sistema_servicio_tecnico.csproj",
         "projectName": "sistema_servicio_tecnico",
-        "projectPath": "/Users/moontivac10n/Projects/sistema_servicio_tecnico/sistema_servicio_tecnico.csproj",
-        "packagesPath": "/Users/moontivac10n/.nuget/packages/",
-        "outputPath": "/Users/moontivac10n/Projects/sistema_servicio_tecnico/obj/",
+        "projectPath": "C:\\Users\\Usuario\\source\\repos\\sistema_servicio_tecnico\\sistema_servicio_tecnico.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\source\\repos\\sistema_servicio_tecnico\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/moontivac10n/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/sdk/7.0.315/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -81,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
