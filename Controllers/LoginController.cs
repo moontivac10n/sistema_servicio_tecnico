@@ -23,11 +23,11 @@ namespace sistema_servicio_tecnico.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Authenticate(string email, string password)
+        public async Task<IActionResult> Authenticate(string correo, string contraseña)
         {
-            var user = await _context.Usuarios.FirstOrDefaultAsync(u => u.Correo == email && u.Password == password);
+            var user = await _context.Usuarios.FirstOrDefaultAsync(u => u.Correo == correo);
 
-            if (user != null)
+            if (user != null && BCrypt.Net.BCrypt.Verify(contraseña, user.Contraseña))
             {
                 // Crear claims para el usuario autenticado
                 var claims = new[]
@@ -53,6 +53,17 @@ namespace sistema_servicio_tecnico.Controllers
                 ViewBag.ErrorMessage = "Correo o contraseña inválidos.";
                 return View("Index");
             }
+        }
+
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+        //creado PARA EL LOGOUT
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Index", "Login");
         }
     }
 }

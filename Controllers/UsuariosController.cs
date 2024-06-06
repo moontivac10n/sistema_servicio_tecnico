@@ -57,10 +57,11 @@ namespace sistema_servicio_tecnico.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre,Apellido,Correo,Password")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("Id,Nombre,Apellido,Correo,Contraseña")] Usuario usuario)
         {
             if (ModelState.IsValid)
-            {
+            {   //Para hashear la contraseña y encriptarla
+                usuario.Contraseña = BCrypt.Net.BCrypt.HashPassword(usuario.Contraseña);
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -89,7 +90,7 @@ namespace sistema_servicio_tecnico.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Apellido,Correo,Password")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Apellido,Correo,Contraseña")] Usuario usuario)
         {
             if (id != usuario.Id)
             {

@@ -142,7 +142,7 @@ public partial class MercyDeveloperContext : DbContext
             entity.Property(e => e.Apellido).HasMaxLength(45);
             entity.Property(e => e.Correo).HasMaxLength(60);
             entity.Property(e => e.Nombre).HasMaxLength(45);
-            entity.Property(e => e.Password).HasMaxLength(100);
+            entity.Property(e => e.Contraseña).HasMaxLength(100);
         });
 
         OnModelCreatingPartial(modelBuilder);

@@ -1,33 +1,35 @@
 ﻿<Properties StartupConfiguration="{B4C13DB7-2A7E-4205-826F-A4C987BB77DA}|https">
+  <MonoDevelop.Ide.ItemProperties.sistema__servicio__tecnico PreferredExecutionTarget="/Applications/Opera.app" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Models/RecepcionEquipo.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/LoginController.cs">
     <Files>
-      <File FileName="Models/DescripcionServicio.cs" Line="15" Column="2" />
-      <File FileName="Models/RecepcionEquipo.cs" Line="1" Column="1" />
-      <File FileName="Controllers/ServiciosController.cs" Line="63" Column="40" />
+      <File FileName="../../AndroidStudioProjects/formulario_login_registro/app/src/test/java/com/example/formulario_login_registro/ExampleUnitTest.kt" Line="1" Column="1" />
+      <File FileName="Controllers/LoginController.cs" Line="30" Column="87" />
+      <File FileName="Models/Usuario.cs" Line="18" Column="84" />
+      <File FileName="Controllers/ClientesController.cs" Line="1" Column="1" />
+      <File FileName="Controllers/UsuariosController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="sistema_servicio_tecnico">
             <Node name="sistema_servicio_tecnico">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="RecepcionEquipo.cs" selected="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="LoginController.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Usuarios" expanded="True" />
               </Node>
             </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.sistema__servicio__tecnico PreferredExecutionTarget="/Applications/Opera.app" />
 </Properties>

@@ -13,7 +13,7 @@ public partial class Usuario
 
     public string Correo { get; set; } = null!;
 
-    public string? Password { get; set; }
+    public string? Contraseña { get; set; }
 
     public virtual ICollection<Servicio> Servicios { get; } = new List<Servicio>();
 }

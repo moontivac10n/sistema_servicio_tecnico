@@ -10,7 +10,7 @@ using sistema_servicio_tecnico.Models;
 
 namespace sistema_servicio_tecnico.Controllers
 {
-
+    [Authorize]
     public class RecepcionesController : Controller
     {
         private readonly MercyDeveloperContext _context;

@@ -9,14 +9,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/custom.css" />
+    <style>
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: #fff;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            transition: all 0.3s ease;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+                border-color: #0056b3;
+            }
+    </style>
 </head>
 <body>
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="text-center">Inicio de sesion</h3>
+                <div class="card shadow">
+                    <div class="card-header text-center">
+                        <h3 class="m-0">Inicio de Sesión</h3>
                     </div>
                     <div class="card-body">
                         @if (ViewBag.ErrorMessage != null)
@@ -26,22 +51,24 @@
                             </div>
                         }
 
-                        <form asp-controller="Login" asp-action="Authenticate" method="post"> 
+                        <form asp-controller="Login" asp-action="Authenticate" method="post">
                             <div class="form-group">
-                                <label for="email">Correo electrónico:</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
+                                <label for="correo">Correo Electrónico:</label>
+                                <input type="email" class="form-control" id="correo" name="correo" placeholder="Ingrese su correo electrónico" required>
                             </div>
                             <div class="form-group">
-                                <label for="password">Contraseña:</label>
-                                <input type="password" class="form-control" id="password" name="password" required>
+                                <label for="contraseña">Contraseña:</label>
+                                <input type="password" class="form-control" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña" required>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block">Iniciar sesion</button>
+                            <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
                         </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        <small>&copy; 2024 Sistema Servicio Técnico</small>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 </html>

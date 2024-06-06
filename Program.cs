@@ -13,7 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// Configure authentication
+//Configuracion de autenticacion y Authorize
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
@@ -38,10 +38,10 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-app.UseAuthentication(); // Agregar middleware de autenticación
+app.UseAuthentication(); //Agregar middleware de autenticación
 app.UseAuthorization();
 
-app.MapControllerRoute(
+app.MapControllerRoute(  //Ruta de inicio
     name: "default",
     pattern: "{controller=Login}/{action=Index}/{id?}");
 
